@@ -93,7 +93,7 @@ public class Main {
 		}
 		return -1;
 	}
-	
+
 	public static void ejercicio5() {
 
 		Scanner sc = new Scanner(System.in);
@@ -206,37 +206,45 @@ public class Main {
 		int pulsRepos, pulsPost1, pulsPost2, recuPrcnt;
 		int recuMax = 0;
 		boolean condicion = false;
-		do {
-			System.out.println("Introduce nombre atleta:");
+
+		while(!condicion) {
+			System.out.println("Introduce nombre atleta (escribe salir para terminar):");
 			nombre = sc.next();
 			if(nombre.equals("salir")) {
 				condicion = true;
-				break;
-			}
-			System.out.println("Introduce pulsaciones en reposo");
-			pulsRepos = sc.nextInt();
-			System.out.println("Introduce pulsaciones después de hacer ejercicio");
-			pulsPost1 = sc.nextInt();
-			System.out.println("Introduce pulsaciones 3 minutos después de hacer ejecercicio");
-			pulsPost2 = sc.nextInt();
-			recuPrcnt = (pulsRepos*100)/pulsPost2;
-			if(recuPrcnt >= 100) {
-				recuPrcnt = 100;
-				System.out.println("Atleta en plena forma");
-			} else if(recuPrcnt >= 50) {
-				System.out.println("Le atleta está en plena forma");
 			} else {
-				System.out.println("Le atleta necesita revisión médica");
+				System.out.println("Introduce pulsaciones en reposo");
+				pulsRepos = sc.nextInt();
+				System.out.println("Introduce pulsaciones después de hacer ejercicio");
+				pulsPost1 = sc.nextInt();
+				System.out.println("Introduce pulsaciones 3 minutos después de hacer ejecercicio");
+				pulsPost2 = sc.nextInt();
+				recuPrcnt = (pulsRepos*100)/pulsPost2;
+				if(recuPrcnt >= 100) {
+					recuPrcnt = 100;
+					System.out.println("Atleta en plena forma");
+				} else if(recuPrcnt >= 50) {
+					System.out.println("Le atleta está en plena forma");
+				} else {
+					System.out.println("Le atleta necesita revisión médica");
+				}
+				System.out.println("La recuperación de "+nombre+" es de "+recuPrcnt+"%");
+				if(recuPrcnt > recuMax) {
+					recuMax = recuPrcnt;
+					nombreMax = nombre;
+				}
 			}
-			System.out.println("La recuperación de "+nombre+" es de "+recuPrcnt+"%");
-			if(recuPrcnt > recuMax) {
-				recuMax = recuPrcnt;
-				nombreMax = nombre;
-			}
-		} while(!condicion);
+		}
 		if(!nombreMax.equals(""))
 			System.out.println("Mejor atleta: "+nombreMax+" con una "
 				+ "recuperación del "+recuMax+"%");
+	}
+	
+	public static void ejercicio7() {
+			System.out.println("Introduce nombre atleta:");
+			String id = sc.next();
+			if(nombre.equals("salir")) {
+				condicion = true;
 	}
 
 }

@@ -29,13 +29,13 @@ public class Main {
 		}
 		System.out.println("La raiz cuadrada de "+valor+" es "+raizC);
 		double preOut = ((int) valor / (raizC * raizC)) * 100;
-		System.out.println("La precisión es de "+preOut);
+		System.out.println("La precisiÃ³n es de "+preOut);
 	}
 	
 	public static void ejercicio4() {
 		int num1 = numIn(1);
 		int num2 = numIn(2);
-		String s[] = {"Suma","Resta","Multiplicación","División","Elevar el primer nº al segundo","Solicitar otros números","Salir"};
+		String s[] = {"Suma","Resta","MultiplicaciÃ³n","DivisiÃ³n","Elevar el primer nÂº al segundo","Solicitar otros nÃºmeros","Salir"};
 		for(int valor = opciones(s); valor <= '6'; valor = opciones(s)) {
 			switch (valor) {
 			case 0:
@@ -61,14 +61,14 @@ public class Main {
 				System.out.println("Chao");
 				break;
 			default:
-				System.out.println("No es una opción valida");
+				System.out.println("No es una opciÃ³n valida");
 				break;
 			}
 		}
 	}
 	
 	public static int numIn(int n) {
-		System.out.println("Introduce número "+n+": ");
+		System.out.println("Introduce nÃºmero "+n+": ");
 		int a = sc.nextInt();
 		while(a <= 0) {
 			System.out.println("Vuelve a introducirlo xd");
@@ -84,7 +84,7 @@ public class Main {
 		for(int i = 0; i < l.size(); i++) {
 			System.out.println((char)('a'+i) + ") " + l.get(i));
 		}
-		System.out.println("Seleccione una opción: ");
+		System.out.println("Seleccione una opciÃ³n: ");
 		int input = sc.nextInt();
 		input = input - 'a';
 		if(input >= 0 && input <= l.size()) {
@@ -92,6 +92,113 @@ public class Main {
 			return (input);
 		}
 		return -1;
+	}
+	
+	public static void ejercicio5() {
+
+		Scanner sc = new Scanner(System.in);
+
+		int numMin, numMax, aux, cont, numero;
+		boolean salir = false;
+
+		System.out.println("Introduce el numero minimo");
+		numMin = sc.nextInt();
+
+		System.out.println("Introduce el numero maximo");
+		numMax = sc.nextInt();
+
+		if (numMax < numMin) {
+			System.out.println("El numero " + numMin + " es mayor que " + numMax + " hay que cambiarlos");
+
+			aux = numMax;
+			numMax = numMin;
+			numMin = aux;
+		}
+
+		double valor = Math.floor(Math.random() * (numMax - numMin + 1) + numMin);
+
+		int resta = numMax - numMin;
+
+		do {
+			if (resta <= 10) {
+				System.out.println("Tienes 3 oportunidades para adivinar el numero");
+
+				for (cont = 1; cont <= 3; cont++) {
+					System.out.println("Introduce un numero: ");
+					numero = sc.nextInt();
+
+					if (numero > valor) {
+						System.out.println(
+								"El numero a adivinar es menor al introducido te quedan " + (3 - cont) + " intentos");
+					} else if (numero < valor) {
+						System.out.println(
+								"El numero a adivinar es mayor al introducido te quedan " + (3 - cont) + " intentos");
+					}
+
+					if (numero == valor) {
+						System.out.println("Enhorabuena, lo has conseguido, te ha costado " + cont + " intentos.");
+						salir = true;
+						cont = 4;
+					} else if (cont == 3) {
+						System.out.println("Has fallado, no has acertado el numero, el numero era " + valor);
+						salir = true;
+					}
+				}
+
+			}
+
+			if (resta >= 11 && resta <= 50) {
+				System.out.println("Tienes 5 oportunidades para adivinar el numero");
+
+				for (cont = 1; cont <= 5; cont++) {
+					System.out.println("Introduce un numero: ");
+					numero = sc.nextInt();
+
+					if (numero > valor) {
+						System.out.println(
+								"El numero a adivinar es menor al introducido te quedan " + (5 - cont) + " intentos");
+					} else if (numero < valor) {
+						System.out.println(
+								"El numero a adivinar es mayor al introducido te quedan " + (5 - cont) + " intentos");
+					}
+
+					if (numero == valor) {
+						System.out.println("Enhorabuena, lo has conseguido, te ha costado " + cont + " intentos.");
+						salir = true;
+						cont = 5;
+					} else if (cont == 5) {
+						System.out.println("Has fallado, no has acertado el numero, el numero era " + valor);
+						salir = true;
+					}
+				}
+			}
+
+			if (resta > 50) {
+				System.out.println("Tienes 8 oportunidades para adivinar el numero");
+
+				for (cont = 1; cont <= 8; cont++) {
+					System.out.println("Introduce un numero: ");
+					numero = sc.nextInt();
+
+					if (numero > valor) {
+						System.out.println(
+								"El numero a adivinar es menor al introducido te quedan " + (8 - cont) + " intentos");
+					} else if (numero < valor) {
+						System.out.println(
+								"El numero a adivinar es mayor al introducido te quedan " + (8 - cont) + " intentos");
+					}
+
+					if (numero == valor) {
+						System.out.println("Enhorabuena, lo has conseguido, te ha costado " + cont + " intentos.");
+						salir = true;
+						cont = 8;
+					} else if (cont == 8) {
+						System.out.println("Has fallado, no has acertado el numero, el numero era " + valor);
+						salir = true;
+					}
+				}
+			}
+		} while (!salir);
 	}
 	
 	public static void ejercicio6() {
@@ -108,20 +215,20 @@ public class Main {
 			}
 			System.out.println("Introduce pulsaciones en reposo");
 			pulsRepos = sc.nextInt();
-			System.out.println("Introduce pulsaciones después de hacer ejercicio");
+			System.out.println("Introduce pulsaciones despuÃ©s de hacer ejercicio");
 			pulsPost1 = sc.nextInt();
-			System.out.println("Introduce pulsaciones 3 minutos después de hacer ejecercicio");
+			System.out.println("Introduce pulsaciones 3 minutos despuÃ©s de hacer ejecercicio");
 			pulsPost2 = sc.nextInt();
 			recuPrcnt = (pulsRepos*100)/pulsPost2;
 			if(recuPrcnt >= 100) {
 				recuPrcnt = 100;
 				System.out.println("Atleta en plena forma");
 			} else if(recuPrcnt >= 50) {
-				System.out.println("Le atleta está en plena forma");
+				System.out.println("Le atleta estÃ¡ en plena forma");
 			} else {
-				System.out.println("Le atleta necesita revisión médica");
+				System.out.println("Le atleta necesita revisiÃ³n mÃ©dica");
 			}
-			System.out.println("La recuperación de "+nombre+" es de "+recuPrcnt+"%");
+			System.out.println("La recuperaciÃ³n de "+nombre+" es de "+recuPrcnt+"%");
 			if(recuPrcnt > recuMax) {
 				recuMax = recuPrcnt;
 				nombreMax = nombre;
@@ -129,7 +236,7 @@ public class Main {
 		} while(!condicion);
 		if(!nombreMax.equals(""))
 			System.out.println("Mejor atleta: "+nombreMax+" con una "
-				+ "recuperación del "+recuMax+"%");
+				+ "recuperaciÃ³n del "+recuMax+"%");
 	}
 
 }

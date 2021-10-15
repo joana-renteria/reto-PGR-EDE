@@ -176,7 +176,7 @@ public class Main {
 			numMin = aux;
 		}
 
-		double valor = Math.floor(Math.random() * (numMax - numMin + 1) + numMin);
+		int val = (int)Math.random() * (numMax - numMin + 1) + numMin;
 
 		int resta = numMax - numMin;
 

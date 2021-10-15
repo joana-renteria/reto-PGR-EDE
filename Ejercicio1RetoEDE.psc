@@ -2,11 +2,11 @@ Algoritmo Ejercicio1Reto
 	Definir condicion Como Logico
 	dias <- 0
 	condicion <- verdadero
-	Escribir "Frecuencia con la que va Ana a la frutería (dias)"
+	Escribir "Frecuencia con la que va Ana a la fruterÃ­a (dias)"
 	Leer A 
-	Escribir "Frecuencia con la que va Bernardo a la frutería (dias)"
+	Escribir "Frecuencia con la que va Bernardo a la fruterÃ­a (dias)"
 	Leer B
-	Escribir "Frecuencia con la que va Carlos a la frutería (dias)"
+	Escribir "Frecuencia con la que va Carlos a la fruterÃ­a (dias)"
 	Leer C
 	Repetir
 		dias <- dias+1
@@ -17,6 +17,6 @@ Algoritmo Ejercicio1Reto
 				FinSi
 			FinSi
 		FinSi
-	Hasta Que condicion
+	Mientras Que condicion = Verdadero
 	Escribir "Cada ",dias," se van a encontrar"
 FinAlgoritmo

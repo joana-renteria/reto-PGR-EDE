@@ -11,6 +11,67 @@ public class Main {
 	public static void main(String[] args) {
 		ejercicio6();
 	}
+	
+		public static void ejercicio1() {
+		int dias=0;
+		int A, B, C; 
+		boolean condicion=true;
+		
+		System.out.println("Frecuencia con la que va Ana a la frutería (dias)");
+		A = sc.nextInt();
+		
+		System.out.println("Frecuencia con la que va Bernardo a la frutería (dias)");
+		B = sc.nextInt();
+		
+		System.out.println("Frecuencia con la que va Carlos a la frutería (dias)");
+		C = sc.nextInt();
+		
+		while (condicion) {
+			dias++;
+			if (dias % A == 0)
+					if (dias%B == 0)
+						if (dias%C == 0)
+							condicion = false;
+			
+		}
+		System.out.println("Cada " + dias + " se van a encontrar");
+	}
+
+	public static void ejercicio2() {
+		boolean continua=true;
+		int horas, dias;
+		double precioHora=45.56;
+		double resultado;
+		double resultadoExtra;
+		while (continua) {
+			System.out.println("Introduce cantidad dias trabajados esta semana: ");
+			dias=sc.nextInt();
+			resultado = 0;
+			resultadoExtra = 0;
+			if (dias>7)
+				dias=7;
+			for (int i= 1; i<=dias; i++) {
+				int extra=3;
+				System.out.println("Introduce cantidad horas trabajadas en el dia " + i + ": ");
+				horas=sc.nextInt();
+				if (horas>8) {
+					horas=horas-8;
+					resultado = 8*precioHora;
+					resultadoExtra += ((precioHora*(extra*horas))/100);
+				} else {
+					resultado += horas*precioHora;
+				}
+			}
+			if(resultadoExtra > ((resultado*30)/100)) {
+				resultadoExtra = ((resultado*30)/100);
+			}
+			System.out.println("Vas a cobrar " + (resultado + resultadoExtra) + " esta semana xd");
+			System.out.println("¿Desea continuar?");
+			if (sc.next().charAt(0)=='N') {
+				continua=false; 
+			}
+		} 		
+	}
 
 	//https://www2.math.upenn.edu/~kazdan/202F09/sqrt.pdf
 	public static void ejercicio3() {

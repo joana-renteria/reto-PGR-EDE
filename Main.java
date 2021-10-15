@@ -199,7 +199,7 @@ public class Main {
 					if (numero == valor) {
 						System.out.println("Enhorabuena, lo has conseguido, te ha costado " + cont + " intentos.");
 						salir = true;
-						cont = 4;
+						cont = 3;
 					} else if (cont == 3) {
 						System.out.println("Has fallado, no has acertado el numero, el numero era " + valor);
 						salir = true;

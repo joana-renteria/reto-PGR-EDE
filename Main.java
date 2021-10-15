@@ -167,7 +167,17 @@ public class Main {
 
 		System.out.println("Introduce el numero maximo");
 		numMax = sc.nextInt();
-
+		
+		while(numMin<0) {
+			System.out.println("El numero menor introducido no puede ser negativo introduce otro numero: ");
+			numMin = sc.nextInt();
+		}
+		
+		while(numMax<0) {
+			System.out.println("El numero mayor introducido no puede ser negativo introduce otro numero: ");
+			numMax = sc.nextInt();
+		}
+		
 		if (numMax < numMin) {
 			System.out.println("El numero " + numMin + " es mayor que " + numMax + " hay que cambiarlos");
 

@@ -20,6 +20,16 @@ Proceso ejercicio5
 	Escribir "Introduce el numero maximo"
 	leer numMax
 	
+	Mientras numMin < 0
+		Escribir "El numero menor introducido no puede ser negativo introduce otro numero: "
+		Leer numMin
+	FinMientras
+	
+	Mientras numMax < 0
+		Escribir "El numero mayor introducido no puede ser negativo introduce otro numero: "
+		leer numMax
+	FinMientras
+	
 	Si (numMax < numMin) Entonces
 		Escribir "El numero ",numMin," es mayor que ",numMax," hay que cambiarlos"
 		

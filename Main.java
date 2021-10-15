@@ -312,10 +312,21 @@ public class Main {
 	}
 	
 	public static void ejercicio7() {
-			System.out.println("Introduce nombre atleta:");
-			String id = sc.next();
-			if(nombre.equals("salir")) {
-				condicion = true;
+			String nombre = "";
+			boolean condicion = false;
+			while(!condicion) {
+				System.out.println("Introduce nombre:");
+				nombre = sc.next();
+				if(nombre.equals("salir")) {
+					condicion = true;
+				} else {
+					System.out.println("(P)fizer, (M)oderna o (N)inguna?");
+					if(input.equals("P")) {
+						System.out.println("Cuantas dosis?");
+						int dosis;
+					}
+				}
+			}
 	}
 
 }

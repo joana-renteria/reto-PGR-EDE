@@ -312,21 +312,48 @@ public class Main {
 	}
 	
 	public static void ejercicio7() {
-			String nombre = "";
-			boolean condicion = false;
-			while(!condicion) {
-				System.out.println("Introduce nombre:");
-				nombre = sc.next();
-				if(nombre.equals("salir")) {
-					condicion = true;
-				} else {
-					System.out.println("(P)fizer, (M)oderna o (N)inguna?");
-					if(input.equals("P")) {
-						System.out.println("Cuantas dosis?");
-						int dosis;
+		String nombre = "";
+		boolean condicion = false;
+		int noVax = 0;
+		while(!condicion) {
+			System.out.println("Introduce nombre (escribe 'salir' para finalizar):");
+			nombre = sc.next();
+			if(nombre.equals("salir")) {
+				condicion = true;
+			} else {
+				System.out.println("(P)fizer, (M)oderna o (N)inguna?");
+				String input = sc.next();
+				if(input.equals("P")) {
+					System.out.println("Cuantas dosis?");
+					short dosis = (short) sc.nextInt();
+					if(dosis < 2) {
+						noVax++;
+					} else {
+						System.out.println("Meses desde la última dosis:");
+						short meses = (short) sc.nextInt();
+						if((6 - meses) > 0) {
+							System.out.println("Le quedan "+(6-meses)+ " meses de protección");
+						} else {
+							System.out.println("No tiene protección");
+						}
 					}
+				} else if(input.equals("M")) {
+					System.out.println("Meses desde la última dosis:");
+					short meses = (short) sc.nextInt();
+					if((6 - meses) > 0) {
+						System.out.println("Le quedan "+(6-meses)+ " meses de protección");
+					} else {
+						System.out.println("No tiene protección");
+					}
+				} else if(input.equals("N")) {
+					System.out.println("No tiene protección");
+					noVax++;
+				} else {
+					System.out.println("Error. Introduce una opción valida");
 				}
 			}
+		}
+		System.out.println("Gente sin vacunar: "+noVax);
 	}
 
 }

@@ -128,6 +128,6 @@ Proceso ejercicio5
 				FinSi
 			FinPara
 		FinSi
-	Hasta Que (!salir )
+	Hasta Que (salir )
 	
 FinProceso

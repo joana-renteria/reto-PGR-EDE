@@ -1,10 +1,10 @@
-Algoritmo ejercicio6
+Proceso ejercicio7
 	Definir nombre Como Cadena
 	Definir condicion Como Logico
 	Definir noVax Como Entero
 	Definir input Como Cadena
 	Definir dosis Como Real
-	Definir mese Como Real
+	Definir meses Como Real
 	nombre <- ""
 	condicion <- Falso
 	noVax <- 0
@@ -27,12 +27,12 @@ Algoritmo ejercicio6
 				Si dosis < 2 Entonces
 					noVax <- noVax+1
 				SiNo
-					Escribir "Meses desde la 鷏tima dosis:"
+					Escribir "Meses desde la 煤ltima dosis:"
 					Leer meses
 					Si ((6 - meses) > 0) Entonces
-						Escribir "Le quedan ",(6-meses)," de protecci髇"
+						Escribir "Le quedan ",(6-meses)," de protecci贸n"
 					SiNo
-						Escribir "No tiene protecci髇"
+						Escribir "No tiene protecci贸n"
 					FinSi
 				FinSi
 			SiNo
@@ -42,25 +42,22 @@ Algoritmo ejercicio6
 					Si dosis < 2 Entonces
 						noVax <- noVax+1
 					SiNo
-						Escribir "Meses desde la 鷏tima dosis:"
+						Escribir "Meses desde la 煤ltima dosis:"
 						Leer meses
 						Si ((6 - meses) > 0) Entonces
-							Escribir "Le quedan ",(6-meses)," de protecci髇"
+							Escribir "Le quedan ",(6-meses)," de protecci贸n"
 						SiNo
-							Escribir "No tiene protecci髇"
+							Escribir "No tiene protecci贸n"
 						FinSi
 					FinSi
+				SiNo Si input = "N" Entonces
+						Escribir "No tiene protecci贸n"
+						noVax <- noVax+1
+					SiNo
+						Escribir "Error. Introduce una opci贸n valida"
+					FinSi
 				FinSi
-			SiNo 
-				Si input = "N" Entonces
-					Escribir "No tiene protecci髇"
-					noVax <- noVax+1
-				FinSi
-			SiNo
-				Escribir "Error. Introduce una opci髇 valida"
 			FinSi
 		FinSi
 	FinMientras
-	
-	
-FinAlgoritmo
+FinProceso

@@ -21,10 +21,10 @@ Proceso ejercicio4
 		Escribir 'b) Resta'
 		Escribir 'c) Multiplicacion'
 		Escribir 'd) Division'
-		Escribir 'e) Elevar el primer nº al segundo'
-		Escribir 'f) Solicitar otros números'
+		Escribir 'e) Elevar el primer nÂº al segundo'
+		Escribir 'f) Solicitar otros nÃºmeros'
 		Escribir 's) Salir'
-		Escribir 'Seleccione una opción:'
+		Escribir 'Seleccione una opciÃ³n:'
 		Leer opci
 		Segun opci  Hacer
 			'a':

@@ -25,9 +25,9 @@ Proceso ejercicio6
 		SiNo
 			Escribir "Introduce pulsaciones en reposo"
 			Leer pulsRepos
-			Escribir "Introduce pulsaciones después de hacer ejercicio"
+			Escribir "Introduce pulsaciones despuÃ©s de hacer ejercicio"
 			Leer pulsPost1
-			Escribir "Introduce pulsaciones 3 minutos después de hacer ejecercicio"
+			Escribir "Introduce pulsaciones 3 minutos despuÃ©s de hacer ejecercicio"
 			Leer pulsPost2
 			
 			recuPrcnt <- redon((pulsRepos*100) / pulsPost2)
@@ -39,10 +39,10 @@ Proceso ejercicio6
 				Si(recuPrcnt>=50)
 					Escribir "Necesita entrenamiento"
 				SiNo
-					Escribir "Le atleta necesita revisión médica"
+					Escribir "Le atleta necesita revisiÃ³n mÃ©dica"
 				FinSi
 			FinSi
-			Escribir "La recuperación de ",nombre," es de ",recuPrcnt,"%"
+			Escribir "La recuperaciÃ³n de ",nombre," es de ",recuPrcnt,"%"
 			Si (recuPrcnt > recuMax)
 				recuMax <- recuPrcnt
 				nombreMax <- nombre
@@ -51,6 +51,6 @@ Proceso ejercicio6
 		
 	FinMientras
 	Si (!nombreMax = "")
-		Escribir "Mejor atleta: ",nombreMax," con una recuperación del ",recuMax,"%"
+		Escribir "Mejor atleta: ",nombreMax," con una recuperaciÃ³n del ",recuMax,"%"
 	FinSi
 FinProceso

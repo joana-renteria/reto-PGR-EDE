@@ -1,3 +1,12 @@
+EJERCICIO1
+Frecuencia con la que va Ana a la frutería (dias)
+> 5
+Frecuencia con la que va Bernardo a la frutería (dias)
+> 6
+Frecuencia con la que va Carlos a la frutería (dias)
+> 10
+Cada 30 se van a encontrar
+
 EJERCICIO2
 Introduce cantidad dias trabajados esta semana:
 > 5
@@ -16,3 +25,118 @@ Vas a cobrar 1734.0136esta semana xd
 > N
 
 EJERCICIO3
+Introduce un valor:
+> 14
+Introduce el error deseado [0]
+> 2
+La raiz cuadrada de 14 es 3.8055555555555554
+La precisión es de 96.67004102509458
+
+EJERCICIO4
+Introduce dos numeros que sean mayores que 0
+Introducir numero1: 
+> 5
+Introducir numero2: 
+> 20
+----MENU--------------------------
+a) Suma
+b) Resta
+c) Multiplicacion
+d) Division
+e) Elevar el primer nº al segundo
+f) Solicitar otros números
+s) Salir
+Seleccione una opción:
+> f
+Introduce dos numeros que sean mayores que 0
+Introducir numero1: 
+> 2
+Introducir numero2: 
+> 10
+----MENU--------------------------
+a) Suma
+b) Resta
+c) Multiplicacion
+d) Division
+e) Elevar el primer nº al segundo
+f) Solicitar otros números
+s) Salir
+Seleccione una opción:
+> e
+2 ^ 10 = 8
+----MENU--------------------------
+a) Suma
+b) Resta
+c) Multiplicacion
+d) Division
+e) Elevar el primer nº al segundo
+f) Solicitar otros números
+s) Salir
+Seleccione una opción:
+> s
+
+EJERCICIO5
+Introduce el numero minimo
+> 1
+Introduce el numero maximo
+> 50
+Tienes 5 oportunidades para adivinar el numero
+Introduce un numero: 
+> 10
+El numero a adivinar es menor al introducido te quedan 4 intentos
+Introduce un numero: 
+> 5
+El numero a adivinar es menor al introducido te quedan 3 intentos
+Introduce un numero: 
+> 1
+Enhorabuena, lo has conseguido, te ha costado 3 intentos.
+
+EJERCICIO6
+Introduce nombre atleta (escribe salir para terminar):
+> Koldo
+Introduce pulsaciones en reposo
+> 90
+Introduce pulsaciones después de hacer ejercicio
+> 120
+Introduce pulsaciones 3 minutos después de hacer ejecercicio
+> 140
+Le atleta está en plena forma
+La recuperación de Koldo es de 64%
+Introduce nombre atleta (escribe salir para terminar):
+> Asier
+Introduce pulsaciones en reposo
+> 95
+Introduce pulsaciones después de hacer ejercicio
+> 115
+Introduce pulsaciones 3 minutos después de hacer ejecercicio
+> 135
+Le atleta está en plena forma
+La recuperación de Asier es de 70%
+Introduce nombre atleta (escribe salir para terminar):
+> salir
+Mejor atleta: Asier con una recuperación del 70%
+
+EJERCICIO7
+Introduce nombre (escribe 'salir' para finalizar):
+> Unai
+(P)fizer, (M)oderna o (N)inguna?
+> P
+Cuantas dosis?
+> 1
+Introduce nombre (escribe 'salir' para finalizar):
+> Koldo
+(P)fizer, (M)oderna o (N)inguna?
+> P
+Cuantas dosis?
+> 2
+Meses desde la última dosis:
+> 3
+Le quedan 3 meses de protección
+Introduce nombre (escribe 'salir' para finalizar):
+> Asier
+(P)fizer, (M)oderna o (N)inguna?
+> N
+No tiene protección
+Introduce nombre (escribe 'salir' para finalizar):
+> salir
+Gente sin vacunar: 2

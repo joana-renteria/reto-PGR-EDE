@@ -43,6 +43,7 @@ public class Main {
 		double precioHora=45.56;
 		double resultado;
 		double resultadoExtra;
+		char sel;
 		while (continua) {
 			System.out.println("Introduce cantidad dias trabajados esta semana: ");
 			dias=sc.nextInt();
@@ -67,7 +68,8 @@ public class Main {
 			}
 			System.out.println("Vas a cobrar " + (resultado + resultadoExtra) + " esta semana xd");
 			System.out.println("¿Desea continuar?");
-			if (sc.next().charAt(0)=='N') {
+			sel = sc.next().charAt(0)
+			if (sel=='N' || sel == 'n') {
 				continua=false; 
 			}
 		} 		

@@ -77,21 +77,21 @@ public class Main {
 
 	//https://www2.math.upenn.edu/~kazdan/202F09/sqrt.pdf
 	public static void ejercicio3() {
-		System.out.println("Introduce un valor:");
-		int valor = sc.nextInt();
+		System.out.println("Introduce un val:");
+		int val = sc.nextInt();
 		System.out.println("Introduce el error deseado [0]");
 		double preIn = sc.nextDouble();
-		double aux = (double) (valor / 2);
+		double aux = (double) (val / 2);
 		boolean condicion = false;
 		double raizC = 0;
 		while(!condicion) {
-			raizC = aux - (aux * aux - (double) valor) / (2 * aux);
+			raizC = aux - (aux * aux - (double) val) / (2 * aux);
 			//if (Math.abs(aux - raizC) < preIn) condicion = true;
-			if((raizC*raizC) == valor || Math.abs((raizC*raizC) - valor) < preIn) condicion = true;
+			if((raizC*raizC) == val || Math.abs((raizC*raizC) - val) < preIn) condicion = true;
 			aux = raizC;
 		}
-		System.out.println("La raiz cuadrada de "+valor+" es "+raizC);
-		double preOut = ((int) valor / (raizC * raizC)) * 100;
+		System.out.println("La raiz cuadrada de "+val+" es "+raizC);
+		double preOut = ((int) val / (raizC * raizC)) * 100;
 		System.out.println("La precisión es de "+preOut);
 	}
 	
@@ -201,20 +201,20 @@ public class Main {
 					System.out.println("Introduce un numero: ");
 					numero = sc.nextInt();
 
-					if (numero > valor) {
+					if (numero > val) {
 						System.out.println(
 								"El numero a adivinar es menor al introducido te quedan " + (3 - cont) + " intentos");
-					} else if (numero < valor) {
+					} else if (numero < val) {
 						System.out.println(
 								"El numero a adivinar es mayor al introducido te quedan " + (3 - cont) + " intentos");
 					}
 
-					if (numero == valor) {
+					if (numero == val) {
 						System.out.println("Enhorabuena, lo has conseguido, te ha costado " + cont + " intentos.");
 						salir = true;
 						cont = 3;
 					} else if (cont == 3) {
-						System.out.println("Has fallado, no has acertado el numero, el numero era " + valor);
+						System.out.println("Has fallado, no has acertado el numero, el numero era " + val);
 						salir = true;
 					}
 				}
@@ -228,20 +228,20 @@ public class Main {
 					System.out.println("Introduce un numero: ");
 					numero = sc.nextInt();
 
-					if (numero > valor) {
+					if (numero > val) {
 						System.out.println(
 								"El numero a adivinar es menor al introducido te quedan " + (5 - cont) + " intentos");
-					} else if (numero < valor) {
+					} else if (numero < val) {
 						System.out.println(
 								"El numero a adivinar es mayor al introducido te quedan " + (5 - cont) + " intentos");
 					}
 
-					if (numero == valor) {
+					if (numero == val) {
 						System.out.println("Enhorabuena, lo has conseguido, te ha costado " + cont + " intentos.");
 						salir = true;
 						cont = 5;
 					} else if (cont == 5) {
-						System.out.println("Has fallado, no has acertado el numero, el numero era " + valor);
+						System.out.println("Has fallado, no has acertado el numero, el numero era " + val);
 						salir = true;
 					}
 				}
@@ -254,20 +254,20 @@ public class Main {
 					System.out.println("Introduce un numero: ");
 					numero = sc.nextInt();
 
-					if (numero > valor) {
+					if (numero > val) {
 						System.out.println(
 								"El numero a adivinar es menor al introducido te quedan " + (8 - cont) + " intentos");
-					} else if (numero < valor) {
+					} else if (numero < val) {
 						System.out.println(
 								"El numero a adivinar es mayor al introducido te quedan " + (8 - cont) + " intentos");
 					}
 
-					if (numero == valor) {
+					if (numero == val) {
 						System.out.println("Enhorabuena, lo has conseguido, te ha costado " + cont + " intentos.");
 						salir = true;
 						cont = 8;
 					} else if (cont == 8) {
-						System.out.println("Has fallado, no has acertado el numero, el numero era " + valor);
+						System.out.println("Has fallado, no has acertado el numero, el numero era " + val);
 						salir = true;
 					}
 				}

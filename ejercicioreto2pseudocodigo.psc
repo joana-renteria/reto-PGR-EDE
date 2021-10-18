@@ -1,13 +1,18 @@
 Algoritmo ejercicioreto2
 	
-	continua <- Verdadero
 	Definir horas Como entero
 	Definir dias Como entero
 	Definir precioHora Como Real
-	precioHora <- 45.56
 	Definir sel Como Caracter
 	Definir resultado Como Real
 	Definir resultadoExtra como real
+	Definir continua Como Logico
+	Definir i Como Entero
+	Definir extra Como Entero
+	
+	continua <- Verdadero
+	precioHora <- 45.56
+	
 	
 	Mientras (continua = Verdadero)
 		Escribir "Introduce cantidad dias trabajados esta semana: "
@@ -19,7 +24,7 @@ Algoritmo ejercicioreto2
 		FinSi
 		Para i <- 1 Hasta dias Con Paso 1 Hacer
 			extra = 3
-			Escribir "Introduce cantidad horas trabajadas en el día " i ": "
+			Escribir "Introduce cantidad horas trabajadas en el dÃ­a " i ": "
 			Leer horas
 			Si (horas > 8)
 				horas <- horas - 8
@@ -32,7 +37,7 @@ Algoritmo ejercicioreto2
 			resultadoExtra = ((resultado*30)/100)
 		FinSi
 		Escribir "Vas a cobrar " (resultado + resultadoExtra) "esta semana xd"
-		Escribir "¿Desea continuar?"
+		Escribir "Â¿Desea continuar?"
 		Leer sel
 		Si (sel = 'N' || sel = 'n')
 			continua <- Falso

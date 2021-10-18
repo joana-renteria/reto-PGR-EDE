@@ -94,65 +94,66 @@ public class Main {
 	}
 	
 	public static void ejercicio4() {
-		int num1 = numIn(1);
-		int num2 = numIn(2);
-		String s[] = {"Suma","Resta","Multiplicación","División","Elevar el primer nº al segundo","Solicitar otros números","Salir"};
-		for(int valor = opciones(s); valor <= '6'; valor = opciones(s)) {
-			switch (valor) {
-			case 0:
-				System.out.println(num1+num2);
+		Scanner sc = new Scanner(System.in);
+		int num1=0, num2=0;
+		String opci;
+		boolean salir=false;
+		
+		System.out.println("Introduce dos numeros que sean mayores que 0");
+		
+		while (num1<=0 || num2<=0) {
+			System.out.println("Introducir numero1: ");
+			num1 = sc.nextInt();
+			System.out.println("Introducir numero2: ");
+			num2 = sc.nextInt();
+		}
+		do {
+			System.out.println("----MENU--------------------------");
+			System.out.println("a) Suma");
+			System.out.println("b) Resta");
+			System.out.println("c) Multiplicacion");
+			System.out.println("d) Division");
+			System.out.println("e) Elevar el primer nº al segundo");
+			System.out.println("f) Solicitar otros números");
+			System.out.println("s) Salir");
+			System.out.println("Seleccione una opción:");
+			opci = sc.next();
+			switch (opci.charAt(0)) {
+			case 'a':
+				System.out.println(num1+" + "+num2+" = "+(num1+num2));
 				break;
-			case 1:
-				System.out.println(num1-num2);
+			case 'b':
+				if (num1>=num2) {
+					System.out.println(num1+" - "+num2+" = "+(num1-num2));
+				} else {
+					System.out.println(num2+" - "+num1+" = "+(num2-num1));
+				}
 				break;
-			case 2:
-				System.out.println(num1*num2);
+			case 'c':
+				System.out.println(num1+" * "+num2+" = "+(num1*num2));
 				break;
-			case 3:
-				System.out.println(num1/num2);
+			case 'd':
+				System.out.println(num1+" / "+num2+" = "+(num1/num2));
 				break;
-			case 4:
-				System.out.println(num1^num2);
+			case 'e':
+				System.out.println(num1+" ^ "+num2+" = "+(num1^num2));
 				break;
-			case 5:
-				num1 = numIn(1);
-				num2 = numIn(2);
+			case 'f':
+				System.out.println("Introduce dos numeros que sean mayores que 0");
+				do {
+					System.out.println("Introducir numero1: ");
+					num1 = sc.nextInt();
+					System.out.println("Introducir numero2: ");
+					num2 = sc.nextInt();
+				} while (num1<=0 || num2<=0);
 				break;
-			case 6:
-				System.out.println("Chao");
+			case 's':
+				salir = true;
 				break;
 			default:
-				System.out.println("No es una opción valida");
-				break;
+				System.out.println("Hola");
 			}
-		}
-	}
-	
-	public static int numIn(int n) {
-		System.out.println("Introduce número "+n+": ");
-		int a = sc.nextInt();
-		while(a <= 0) {
-			System.out.println("Vuelve a introducirlo xd");
-			a = sc.nextInt();
-		}
-		return a;
-	}
-
-	public static int opciones(String[] s) {
-		// List<String> l = new List<String>();
-		System.out.println("----MENU--------------------------");
-		List<String> l = Arrays.asList(s);
-		for(int i = 0; i < l.size(); i++) {
-			System.out.println((char)('a'+i) + ") " + l.get(i));
-		}
-		System.out.println("Seleccione una opción: ");
-		int input = sc.nextInt();
-		input = input - 'a';
-		if(input >= 0 && input <= l.size()) {
-			System.out.println(input);
-			return (input);
-		}
-		return -1;
+		} while (!salir);
 	}
 
 	public static void ejercicio5() {

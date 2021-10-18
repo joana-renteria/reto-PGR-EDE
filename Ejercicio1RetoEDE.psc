@@ -1,5 +1,9 @@
 Algoritmo Ejercicio1Reto
 	Definir condicion Como Logico
+	Definir dias Como Entero
+	Definir A Como Entero
+	Definir B Como Entero
+	Definir C Como Entero
 	dias <- 0
 	condicion <- verdadero
 	Escribir "Frecuencia con la que va Ana a la frutería (dias)"

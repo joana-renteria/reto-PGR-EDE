@@ -60,4 +60,5 @@ Proceso ejercicio7
 			FinSi
 		FinSi
 	FinMientras
+	Escribir "Gente sin vacunar: ",noVax
 FinProceso

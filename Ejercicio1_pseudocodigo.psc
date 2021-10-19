@@ -1,5 +1,5 @@
 Algoritmo Ejercicio1Reto
-		Definir condicion Como Logico
+	Definir condicion Como Logico
 	Definir dias Como Entero
 	Definir A Como Entero
 	Definir B Como Entero

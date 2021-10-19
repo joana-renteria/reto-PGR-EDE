@@ -26,6 +26,6 @@ Proceso ejercicio3
 		FinSi
 	FinMientras
 	Escribir "La raiz cuadrada de ",val," es ",raizC
-	preOut <- (trunc(val) / (raizC * raizC)) * 100
+	preOut <- (val / (raizC * raizC)) * 100
 	Escribir "La precisión es de ",preOut
 FinProceso
